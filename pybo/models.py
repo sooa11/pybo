@@ -1,5 +1,27 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, AbstractUser
+
+
+
+class 안녕유저(AbstractUser):
+    pass
+
+
+class Sale():
+    first_name = models.CharField(max_length=10)
+    last_name = models.CharField(max_length=10)
+    age = models.IntegerField(default=1)
+    person = models.ForeignKey("Person", on_delete=models.CASCADE())
+
+class Person():
+    직원 = models.OneToOneField(안녕유저, on_delete=models.CASCADE())
+
+
+
+
+
+
+
 
 # Create your models here.
 class Question(models.Model):
