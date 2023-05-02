@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewprot" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS   -->
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <!-- pybo CSS  -->
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" >
+    <title>Hello, pybo!</title>
+</head>
+<body>
+<!--네비게이션 바 to navbar.html-->
+{% include "navbar.html" %}
+<!-- 기본 템플릿 안에 삽입될 내용 Start-->
+{% block content %}
+{% endblock %}
+<!-- 기본 템플릿 안에 삽입될 내용 End-->
+<!--부트스트랩, 제이쿼리 추가-->
+<script src="{% static 'jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'bootstrap.min.js' %}"></script>
+<!-- 자바스크립트 Start -->
+{% block script %}
+{% endblock %}
+<!-- 자바스크립트 End -->
+</body>
+</html>
+
+<!--위에 meta 태그 작업 후 question_list로가서 다시 변경하였음 -->
+<!--bootstrap 파일 전부 가져와서 하나씩 static 에 추가하였음 -->
